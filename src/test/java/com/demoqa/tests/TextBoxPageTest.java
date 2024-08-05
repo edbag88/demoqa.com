@@ -7,8 +7,8 @@ public class TextBoxPageTest extends TestBase {
 
     @Test
     public void fillFormTest() {
-        textBoxPage.openTextBoxPage("/text-box")
-                .setFullname("Robert")
+        openPage("/text-box");
+        textBoxPage.setFullname("Robert")
                 .setEmail("test@mail.ru")
                 .setCurrentAddress("Ufa, Lenina street, 10")
                 .scrollTo("//label[@id='permanentAddress-label']");

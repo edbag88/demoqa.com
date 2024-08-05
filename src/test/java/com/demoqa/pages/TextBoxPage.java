@@ -1,11 +1,10 @@
 package com.demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.open;
+
 
 public class TextBoxPage {
     SelenideElement fullName = $x("//input[@id='userName']");
@@ -15,10 +14,6 @@ public class TextBoxPage {
     SelenideElement submitButton = $x("//button[@id='submit']");
 
 
-    public TextBoxPage openTextBoxPage(String value) {
-        open(value);
-        return this;
-    }
     public void scrollTo(String value){
         $x(value).scrollTo();
     }
