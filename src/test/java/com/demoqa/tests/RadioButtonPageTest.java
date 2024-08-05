@@ -6,18 +6,16 @@ public class RadioButtonPageTest extends TestBase {
 
     @Test
     public void checkRadioButtonYes() {
-        pageRadio.openRadioPage()
-                .clickRadioButton(pageRadio.ButtonYes)
+        openPage("/radio-button");
+        pageRadio.clickRadioButton(pageRadio.ButtonYes)
                 .checkRadioText("Yes");
 
     }
 
     @Test
-    public void checkRadioButton() throws InterruptedException {
-        pageRadio.openRadioPage()
-                .clickRadioButton(pageRadio.ButtonImpressive)
+    public void checkRadioButton(){
+        openPage("/radio-button");
+        pageRadio.clickRadioButton(pageRadio.ButtonImpressive)
                 .checkRadioText("Impressive");
-
-        Thread.sleep(4000);
     }
 }
